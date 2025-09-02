@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Фрогсайд | Frogs Project</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Знакомьтесь с удивительными видами жаб!</h1>
+    <div class="cards">
+        <!-- Первая карточка -->
+        <div class="card" onclick="toggleDescription(this)">
+            <img src="{{ url_for('static', filename='images/frog1.jpg') }}" alt="Жаба №1">
+            <div class="description">Это зелёная древесная лягушка, живущая в тропиках и известная своей яркой окраской, очень любит какао с баранками.</div>
+        </div>
+        
+        <!-- Вторая карточка -->
+        <div class="card" onclick="toggleDescription(this)">
+            <img src="{{ url_for('static', filename='images/frog2.jpg') }}" alt="Жаба №2">
+            <div class="description">Маленькая травоядная жаба, распространённая в Европе и предпочитающая лате матча с печеньками.</div>
+        </div>
+        
+        <!-- Третья карточка -->
+        <div class="card" onclick="toggleDescription(this)">
+            <img src="{{ url_for('static', filename='images/frog3.jpg') }}" alt="Жаба №3">
+            <div class="description">Австралийский вид амфибий, известный своей уникальной способностью изменять цвет кожи и любовью к капучино и печёным яблокам.</div>
+        </div>
+    </div>
+</div>
+
+<!-- Скрипт для открытия/закрытия окна описания -->
+<script>
+    function toggleDescription(card) {
+        card.querySelector('.description').classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
